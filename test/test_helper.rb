@@ -4,4 +4,3 @@ require 'bundler'
 Bundler.setup
 require 'action_view'
 require 'formatize'
-
