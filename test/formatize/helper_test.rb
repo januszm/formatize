@@ -1,5 +1,4 @@
 require 'test_helper'
-
 class FormatizeHelperTest < ActionView::TestCase
   tests Formatize::Helper
 
