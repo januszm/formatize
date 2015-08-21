@@ -1,4 +1,3 @@
 source :rubygems
 gemspec :path => '../'
-gem 'actionpack', '4.2.0.rc1'
-
+gem 'actionpack', '< 4.3'
