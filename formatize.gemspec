@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'RedCloth',   '~> 4.2'
   s.add_dependency 'bluecloth',  '~> 2.2'
-  s.add_dependency 'actionpack', '< 4.3'
+  s.add_dependency 'actionpack', '~> 5.0.0', '>= 5.0.0.1'
 
   s.add_development_dependency 'rake'
   s.add_development_dependency 'minitest'
