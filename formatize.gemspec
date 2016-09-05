@@ -17,5 +17,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'actionpack', '< 4.3'
 
   s.add_development_dependency 'rake'
+  s.add_development_dependency 'minitest'
 end
 

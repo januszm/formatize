@@ -1,4 +1,5 @@
 require 'test_helper'
+
 class FormatizeHelperTest < ActionView::TestCase
   tests Formatize::Helper
 
@@ -23,7 +24,7 @@ class FormatizeHelperTest < ActionView::TestCase
   end
 
   def test_textilize_should_sanitize_unsafe_input
-    assert_equal("<p>This is worded <strong>strongly</strong></p>", textilize("This is worded <strong>strongly</strong><script>code!</script>"))
+    assert_equal("<p>This is worded <strong>strongly</strong>code!</p>", textilize("This is worded <strong>strongly</strong><script>code!</script>"))
   end
 
   def test_textilize_should_raise_error_if_safe_flag
@@ -57,7 +58,7 @@ class FormatizeHelperTest < ActionView::TestCase
   end
 
   def test_textilize_without_paragraph_should_sanitize_unsafe_input
-    assert_equal("This is worded <strong>strongly</strong>", textilize_without_paragraph("This is worded <strong>strongly</strong><script>code!</script>"))
+    assert_equal("This is worded <strong>strongly</strong>code!", textilize_without_paragraph("This is worded <strong>strongly</strong><script>code!</script>"))
   end
 
   def test_textilize_without_paragraph_should_raise_error_if_safe_flag
@@ -91,7 +92,7 @@ class FormatizeHelperTest < ActionView::TestCase
   end
 
   def test_markdown_should_sanitize_unsafe_input
-    assert_equal("<p>This is worded <strong>strongly</strong></p>", markdown("This is worded <strong>strongly</strong><script>code!</script>"))
+    assert_equal("<p>This is worded <strong>strongly</strong>code!</p>", markdown("This is worded <strong>strongly</strong><script>code!</script>"))
   end
 
   def test_markdown_should_raise_error_if_safe_flag
